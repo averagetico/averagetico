@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Average Tico · Links</title>
+<meta name="description" content="El mundo, contado por un tico. Documentales de viaje.">
+<meta name="theme-color" content="#334361">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Source+Serif+4:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+
+<script>
+/* =====================================================================
+   ✏️  EDITÁ SOLO ESTA PARTE
+   - Para cambiar un link: reemplazá lo que está entre comillas en "url".
+   - Para quitar un botón: borrá su bloque { ... }, (incluida la coma).
+   - Para agregar uno: copiá un bloque completo y pegalo debajo.
+   - "color" puede ser: "azul", "terracota", "teal" o "mostaza".
+   - "icono" puede ser: "youtube", "play", "tiktok", "escudo", "link".
+   - "destacado: true" muestra el botón grande con miniatura del video.
+   ===================================================================== */
+
+const PERFIL = {
+  nombre: "Average Tico",
+  usuario: "@averagetico",
+  frase: "El mundo, contado por un tico."
+};
+
+const LINKS = [
+  {
+    titulo: "Mirá el video más reciente",
+    subtitulo: "Nuevo en el canal",
+    url: "https://youtu.be/FCME7Hfe_N4?si=pRDTw618oTsi2LKT",
+    color: "terracota",
+    icono: "play",
+    destacado: true
+  },
+  {
+    titulo: "Canal de YouTube",
+    subtitulo: "Documentales de viaje",
+    url: "https://www.youtube.com/@AverageTico",
+    color: "azul",
+    icono: "youtube"
+  },
+  {
+    titulo: "TikTok",
+    subtitulo: "@averagetico_cr",
+    url: "https://www.tiktok.com/@averagetico_cr",
+    color: "teal",
+    icono: "tiktok"
+  },
+  {
+    titulo: "Seguro de viajes IATI",
+    subtitulo: "El que uso en mis viajes",
+    url: "https://www.iatiglobal.com/en/?r=41342594742885&utm_source=colaboradores&utm_medium=referral&cmp=averagetico&utm_campaign=averagetico",
+    color: "mostaza",
+    icono: "escudo"
+  }
+];
+
+/* ===================== FIN DE LA PARTE EDITABLE ===================== */
+</script>
+
+<style>
+  :root{
+    --azul:#334361; --terracota:#BF5D49; --teal:#518991;
+    --mostaza:#C8A75B; --hueso:#F5F4F0; --hueso-2:#E8E6E0; --carbon:#343942;
+    --gris:#6B7080;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%}
+  body{
+    background:var(--hueso); color:var(--carbon);
+    font-family:"Barlow",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;min-height:100vh;
+  }
+
+  /* ---------- Cabecera ---------- */
+  header{
+    background:var(--azul); color:var(--hueso);
+    position:relative; overflow:hidden;
+    padding:44px 16px 72px; text-align:center;
+  }
+  header .deco{position:absolute;inset:0;pointer-events:none}
+  .logo{width:104px;height:104px;margin:0 auto 18px;display:block;position:relative}
+  h1{
+    font-family:"Bebas Neue",sans-serif;font-weight:400;
+    font-size:clamp(46px,13vw,64px);line-height:.9;letter-spacing:1px;position:relative
+  }
+  h1 span{color:var(--mostaza)}
+  .frase{
+    font-family:"Source Serif 4",serif;font-style:italic;
+    font-size:18px;color:#D9DCE4;margin-top:10px;position:relative
+  }
+  .usuario{
+    font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;
+    color:#AEB5C6;margin-top:14px;position:relative
+  }
+
+  /* ---------- Links ---------- */
+  main{
+    width:100%;max-width:480px;margin:-40px auto 0;padding:0 16px 32px;
+    position:relative;display:flex;flex-direction:column;gap:14px;flex:1
+  }
+  a.btn{
+    --c:var(--azul);
+    display:flex;align-items:center;gap:14px;
+    background:#FCFBF9;border-radius:14px;padding:16px 18px 16px 20px;
+    text-decoration:none;color:var(--carbon);
+    box-shadow:0 1px 0 rgba(52,57,66,.06),0 6px 18px -8px rgba(51,67,97,.28);
+    border-left:6px solid var(--c);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  a.btn:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(52,57,66,.06),0 12px 24px -10px rgba(51,67,97,.4)}
+  a.btn:active{transform:translateY(0)}
+  a.btn:focus-visible{outline:3px solid var(--mostaza);outline-offset:3px}
+  .ico{
+    flex:0 0 44px;height:44px;border-radius:50%;
+    background:var(--c);color:var(--hueso);
+    display:grid;place-items:center
+  }
+  .ico svg{width:22px;height:22px}
+  .txt{flex:1;min-width:0}
+  .t{font-family:"Bebas Neue",sans-serif;font-size:25px;line-height:1;letter-spacing:.5px;color:var(--azul)}
+  .s{font-size:14px;color:var(--gris);margin-top:4px}
+  .flecha{color:var(--c);flex:0 0 auto}
+
+  /* Destacado (video) */
+  a.btn.dest{flex-direction:column;align-items:stretch;padding:0;border-left:none;overflow:hidden;gap:0}
+  .thumb{position:relative;aspect-ratio:16/9;background:var(--azul) center/cover no-repeat}
+  .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(51,67,97,0) 45%,rgba(37,49,72,.75))}
+  .badge{
+    position:absolute;top:12px;left:12px;z-index:1;
+    background:var(--c);color:#fff;font-weight:700;font-size:12px;
+    letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;border-radius:6px
+  }
+  .play{
+    position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:64px;height:64px;border-radius:50%;background:rgba(245,244,240,.95);
+    display:grid;place-items:center;color:var(--terracota);
+    box-shadow:0 8px 24px rgba(0,0,0,.25)
+  }
+  .play svg{width:26px;height:26px;margin-left:4px}
+  .dest .fila{display:flex;align-items:center;gap:14px;padding:16px 18px;border-top:5px solid var(--c)}
+
+  /* ---------- Pie ---------- */
+  footer{text-align:center;padding:8px 16px 34px}
+  .pv{font-family:"Bebas Neue",sans-serif;font-size:34px;color:var(--azul);letter-spacing:1px}
+  .pv-sub{font-family:"Source Serif 4",serif;font-style:italic;color:var(--terracota);font-size:16px}
+  .franja{display:flex;height:8px}
+  .franja i{flex:1}
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="deco" viewBox="0 0 400 300" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+    <g fill="none" stroke="#45567A" stroke-width="4">
+      <path d="M290 300 L350 205 L410 300"/>
+      <path d="M320 300 L350 250 L380 300"/>
+      <path d="M-20 300 L30 225 L80 300"/>
+    </g>
+    <path d="M342 218 L350 205 L358 218 L354 216 L350 222 L346 216Z" fill="#BF5D49"/>
+    <circle cx="372" cy="40" r="14" fill="none" stroke="#C8A75B" stroke-width="4"/>
+    <path d="M0 282 q25 -12 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#518991" stroke-width="5"/>
+  </svg>
+
+  <!-- Isotipo (versión negativo) -->
+  <svg class="logo" viewBox="0 0 200 200" role="img" aria-label="Logo Average Tico">
+    <defs><clipPath id="c"><circle cx="100" cy="100" r="100"/></clipPath></defs>
+    <g clip-path="url(#c)">
+      <rect width="200" height="200" fill="#F5F4F0"/>
+      <path d="M100 38 L178 170 L22 170Z" fill="#334361"/>
+      <path d="M100 38 L114 62 L108 58 L100 69 L92 58 L86 62Z" fill="#BF5D49"/>
+      <path d="M100 128 L118 162 L82 162Z" fill="#F5F4F0"/>
+      <path d="M0 150 C22 140 38 160 66 158 C90 156 100 142 124 142 C150 142 162 160 200 154 L200 200 L0 200Z" fill="#518991"/>
+    </g>
+    <circle cx="140" cy="62" r="16" fill="#C8A75B"/>
+  </svg>
+
+  <h1 id="nombre">Average <span>Tico</span></h1>
+  <p class="frase" id="frase"></p>
+  <p class="usuario" id="usuario"></p>
+</header>
+
+<main id="links"></main>
+
+<footer>
+  <div class="pv">Pura vida</div>
+  <div class="pv-sub">Nos vemos en el próximo viaje.</div>
+</footer>
+<div class="franja" aria-hidden="true">
+  <i style="background:#334361"></i><i style="background:#BF5D49"></i><i style="background:#518991"></i><i style="background:#C8A75B"></i><i style="background:#E8E6E0"></i>
+</div>
+
+<script>
+  const COLORES = {azul:"#334361",terracota:"#BF5D49",teal:"#518991",mostaza:"#C8A75B"};
+  const ICONOS = {
+    youtube:'<svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="#FCFBF9"/></svg>',
+    play:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>',
+    tiktok:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.8 2.3 4.6 5 4.8"/></svg>',
+    escudo:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><path d="M8.8 12l2.2 2.2 4.2-4.4" stroke-linecap="round"/></svg>',
+    link:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>'
+  };
+  const FLECHA = '<svg class="flecha" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>';
+
+  // Saca el ID de un link de YouTube para mostrar la miniatura automáticamente
+  function idYouTube(url){
+    const m = url.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);
+    return m ? m[1] : null;
+  }
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+  // Perfil
+  const partes = PERFIL.nombre.trim().split(" ");
+  const ultima = partes.pop();
+  document.getElementById("nombre").innerHTML = (partes.length ? esc(partes.join(" ")) + " " : "") + "<span>" + esc(ultima) + "</span>";
+  document.getElementById("frase").textContent = PERFIL.frase;
+  document.getElementById("usuario").textContent = PERFIL.usuario;
+  document.title = PERFIL.nombre + " · Links";
+
+  // Botones
+  const cont = document.getElementById("links");
+  LINKS.forEach(l => {
+    const a = document.createElement("a");
+    a.href = l.url; a.target = "_blank"; a.rel = "noopener";
+    a.className = "btn";
+    a.style.setProperty("--c", COLORES[l.color] || COLORES.azul);
+    const icono = ICONOS[l.icono] || ICONOS.link;
+    const fila = `<span class="ico">${icono}</span>
+      <span class="txt"><span class="t" style="display:block">${esc(l.titulo)}</span>
+      ${l.subtitulo ? `<span class="s" style="display:block">${esc(l.subtitulo)}</span>` : ""}</span>${FLECHA}`;
+
+    const vid = l.destacado ? idYouTube(l.url) : null;
+    if (vid){
+      a.classList.add("dest");
+      a.innerHTML = `<span class="thumb" style="display:block;background-image:url(https://img.youtube.com/vi/${vid}/hqdefault.jpg)">
+          <span class="badge">${esc(l.subtitulo || "Nuevo")}</span>
+          <span class="play">${ICONOS.play}</span></span>
+        <span class="fila"><span class="txt"><span class="t" style="display:block">${esc(l.titulo)}</span>
+        <span class="s" style="display:block">YouTube · Average Tico</span></span>${FLECHA}</span>`;
+    } else {
+      a.innerHTML = fila;
+    }
+    cont.appendChild(a);
+  });
+</script>
+</body>
+</html>
