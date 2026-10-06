@@ -130,7 +130,6 @@ const LINKS = [
   /* Destacado (video) */
   a.btn.dest{flex-direction:column;align-items:stretch;padding:0;border-left:none;overflow:hidden;gap:0}
   .thumb{position:relative;aspect-ratio:16/9;background:var(--azul) center/cover no-repeat}
-  .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(51,67,97,0) 45%,rgba(37,49,72,.75))}
   .badge{
     position:absolute;top:12px;left:12px;z-index:1;
     background:var(--c);color:#fff;font-weight:700;font-size:12px;
@@ -237,9 +236,8 @@ const LINKS = [
     if (vid){
       a.classList.add("dest");
       a.innerHTML = `<span class="thumb" style="display:block;background-image:url(https://img.youtube.com/vi/${vid}/hqdefault.jpg)">
-          <span class="badge">${esc(l.subtitulo || "Nuevo")}</span>
           <span class="play">${ICONOS.play}</span></span>
-        <span class="fila"><span class="txt"><span class="t" style="display:block">${esc(l.titulo)}</span>
+        <span class="fila"><span class="txt"><span class="badge">${esc(l.subtitulo || "Nuevo")}</span><span class="t" style="display:block">${esc(l.titulo)}</span>
         <span class="s" style="display:block">YouTube · Average Tico</span></span>${FLECHA}</span>`;
     } else {
       a.innerHTML = fila;
